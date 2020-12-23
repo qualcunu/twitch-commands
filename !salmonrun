@@ -1,0 +1,9 @@
+$(eval f = `$(urlfetch json https://splatoon2.ink/data/coop-schedules.json)`; 
+f = f.replace(/\n|\r/gm, ""); 
+p = JSON.parse(f); 
+s = new Date(p.details[0].start_time * 1000).toDateString(); 
+t = new Date(p.details[0].start_time * 1000).getHours() + ":00"; 
+r = new Date(p.details[0].end_time * 1000).getHours() + ":00"; 
+e = new Date(p.details[0].end_time * 1000).toDateString(); 
+a = p.details[0].stage.name; 
+`Salmon run opens on ${s} ${t} EST until ${e} ${r} EST on ${a}`; )	
