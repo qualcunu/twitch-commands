@@ -1,0 +1,8 @@
+$(eval f = `$(urlfetch json https://gist.githubusercontent.com/qualcunu/32c87719320e07a32903960e5a57f919/raw/5b553121fa17b12120d2d1c5655472cf13bb5ecd/Splatoon%25202%2520Weapon%2520List)`; 
+k = JSON.parse(f); 
+a = k.main_weapon_list; 
+r = Math.random(); 
+t = a.length; 
+i = Math.floor(r * t); 
+x = a[i]; z = x.replace(/_/g, " "); 
+`Your random weapon is the ${z}!`; )	
