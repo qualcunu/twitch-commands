@@ -13,7 +13,8 @@ m = p.gachi[0].rule.name;
 -----------------------------------------------------------------------------------------------
 
 Splatoon 3: [series]
-
+  
+    Current:
 $(eval f = `$(urlfetch json https://splatoon3.ink/data/schedules.json)`; 
 f = f.replace(/\n|\r/gm, ""); 
 p = JSON.parse(f); 
@@ -22,9 +23,21 @@ b = p.data.bankaraSchedules.nodes[0].bankaraMatchSettings[0].vsStages[1].name;
 m = p.data.bankaraSchedules.nodes[0].bankaraMatchSettings[0].vsRule.name;
 `The current anarchy ranked series mode is ${m} on ${a} and ${b}!`;)
 
+    Future:
+$(eval f = `$(urlfetch json https://splatoon3.ink/data/schedules.json)`; 
+f = f.replace(/\n|\r/gm, ""); 
+p = JSON.parse(f); 
+a = p.data.bankaraSchedules.nodes[1].bankaraMatchSettings[0].vsStages[0].name; 
+b = p.data.bankaraSchedules.nodes[1].bankaraMatchSettings[0].vsStages[1].name; 
+m = p.data.bankaraSchedules.nodes[1].bankaraMatchSettings[0].vsRule.name;
+`The future anarchy ranked series mode will be ${m} on ${a} and ${b}!`;)
+
+--
+
 
 Splatoon 3: [open]
 
+    Current:
 $(eval f = `$(urlfetch json https://splatoon3.ink/data/schedules.json)`; 
 f = f.replace(/\n|\r/gm, ""); 
 p = JSON.parse(f); 
@@ -32,3 +45,12 @@ a = p.data.bankaraSchedules.nodes[0].bankaraMatchSettings[1].vsStages[0].name;
 b = p.data.bankaraSchedules.nodes[0].bankaraMatchSettings[1].vsStages[1].name; 
 m = p.data.bankaraSchedules.nodes[0].bankaraMatchSettings[1].vsRule.name;
 `The current anarchy ranked open mode is ${m} on ${a} and ${b}!`;)
+
+    Future:
+$(eval f = `$(urlfetch json https://splatoon3.ink/data/schedules.json)`; 
+f = f.replace(/\n|\r/gm, ""); 
+p = JSON.parse(f); 
+a = p.data.bankaraSchedules.nodes[1].bankaraMatchSettings[1].vsStages[0].name; 
+b = p.data.bankaraSchedules.nodes[1].bankaraMatchSettings[1].vsStages[1].name; 
+m = p.data.bankaraSchedules.nodes[1].bankaraMatchSettings[1].vsRule.name;
+`The future anarchy ranked open mode will be ${m} on ${a} and ${b}!`;)
