@@ -1,3 +1,5 @@
+Splatoon 2:
+
 $(eval f = `$(urlfetch json https://splatoon2.ink/data/schedules.json)`; 
 f = f.replace(/\n|\r/gm, ""); 
 p = JSON.parse(f); 
@@ -7,3 +9,14 @@ a = p.regular[0].stage_a.name;
 b = p.regular[0].stage_b.name; 
 m = p.regular[0].rule.name; 
 `The current ${m} rotation is on ${a} & ${b} from ${s} to ${e} EST`; )	
+
+-----------------------------------------------------------------------------------
+
+Splatoon 3:
+
+$(eval f = `$(urlfetch json https://splatoon3.ink/data/schedules.json)`; 
+f = f.replace(/\n|\r/gm, ""); 
+p = JSON.parse(f); 
+a = p.data.regularSchedules.nodes[0].regularMatchSetting[0].vsStages[0].name; 
+b = p.data.regularSchedules.nodes[0].regularMatchSetting[0].vsStages[1].name; 
+`The current turf war rotation is on ${a} & ${b}!`;)
