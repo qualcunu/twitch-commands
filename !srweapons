@@ -1,3 +1,5 @@
+Splatoon 2:
+
 $(eval f = `$(urlfetch json https://splatoon2.ink/data/coop-schedules.json)`; 
 f = f.replace(/\n|\r/gm, ""); 
 p = JSON.parse(f); 
@@ -6,3 +8,18 @@ b = p.details[0].weapons[1].weapon.name;
 c = p.details[0].weapons[2].weapon.name; 
 d = p.details[0].weapons[3].weapon.name; 
 ` The weapons in the current Salmon Run are: ${a}, ${b}, ${c}, and ${d}`; )	
+
+---------------------------------------------------------------------------------------
+
+Splatoon 3:
+
+$(eval f = `$(urlfetch json https://splatoon3.ink/data/schedules.json)`;
+f = f.replace(/\n|\r/gm, "");
+p = JSON.parse(f);
+e = p.data.coopGroupingSchedule.regularSchedules.nodes[0].setting;
+m = e.coopStage.name;
+a = e.weapons[0].name;
+b = e.weapons[1].name;
+c = e.weapons[2].name;
+d = e.weapons[3].name;
+`The current salmon run Map is ${m}. The current salmon run weapons are: ${a}, ${b}, ${c}, and ${d}!`;)
