@@ -1,4 +1,4 @@
-{"main_weapon_list": 
+"main_weapon_list":{
 	"52_Gal",
 	"96_Gal",
 	"Aerospray_MG",
@@ -10,11 +10,11 @@
 	"Clash_Blaster",
 	"Classic_Squiffer",
 	"Dapple_Dualies",
-  "Dark_Tetra_dualies",
+  	"Dark_Tetra_dualies",
 	"Dualie_Squelchers",
 	"Dynamo_Roller",
-  "E_Liter_4K",
-  "E_Liter_4k_Scope",
+  	"E_Liter_4K",
+  	"E_Liter_4k_Scope",
 	"Explosher",
 	"Flingza_Roller",
 	"Glooga_Dualies",
@@ -30,7 +30,7 @@
 	"N_Zap_85",
 	"Nautilus_47",
 	"Octobrush",
-  "REEF_LUX_450",
+  	"REEF_LUX_450",
 	"Range_Blaster",
 	"Rapid_Blaster",
 	"Rapid_Blaster_Pro",
@@ -41,8 +41,8 @@
 	"Splat_Charger",
 	"Splat_Dualies",
 	"Splat_Roller",
-  "Splatana_Stamper",
-  "Splatana_Wiper",
+  	"Splatana_Stamper",
+ 	"Splatana_Wiper",
 	"Splatterscope",
 	"Splattershot",
 	"Splattershot_Jr",
@@ -52,4 +52,4 @@
 	"Tenta_Brella",
 	"Tri_Slosher",
 	"Undercover_Brella",
-}
+	}
